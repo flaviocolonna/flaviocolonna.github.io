@@ -68,6 +68,9 @@ var scroll = function(id) {
 };
 var open = function() {
 	var tl = new TimelineMax();
+	tl.to($('#page-content-wrapper'), 1, {
+		opacity : 0.3
+	});
 	tl.to($("#sidebar-wrapper"), 1, {
 		'margin-left' : "0px",
 		left : '0px',
@@ -75,6 +78,8 @@ var open = function() {
 	}, 'feature').addCallback(function() {
 		$('.sidebar-nav').toggle(400);
 		$('#sidebar-wrapper h1').fadeIn(400);
+		$('#menu').removeClass("fa-bars");
+		$('#menu').addClass("fa-close");
 	});
 	opened = true;
 };
@@ -90,8 +95,10 @@ var close = function() {
 		}, 'feature');
 		tl.to($('#page-content-wrapper'), 1, {
 			opacity : 1
-		});
+		}, 'feature');
 	});
+	$('#menu').removeClass("fa-close");
+	$('#menu').addClass("fa-bars fa-2x");
 	opened = false;
 };
 
