@@ -46,7 +46,7 @@ var main = function() {
 			menuCompresso = true;
 		} else if ($(window).scrollTop() < 40 && menuCompresso === true) {
 			var tl = new TimelineMax();
-			tl.to($('#bar-menu'), 2, {
+			tl.to($('#bar-menu'), 0.5, {
 				width : '100%'
 			}).addCallback(function() {
 				$('#bar-menu h4').css('display', 'block');
@@ -58,7 +58,7 @@ var main = function() {
 };
 var scroll = function(id) {
 	var scrollY = $(id).offset().top;
-	TweenMax.to(window, 2.5, {
+	TweenMax.to(window, 0.5, {
 		scrollTo : {
 			y : scrollY,
 			x : 0
@@ -68,10 +68,10 @@ var scroll = function(id) {
 };
 var open = function() {
 	var tl = new TimelineMax();
-	tl.to($('#page-content-wrapper'), 1, {
+	tl.to($('#page-content-wrapper'), 0.2, {
 		opacity : 0.3
 	});
-	tl.to($("#sidebar-wrapper"), 1, {
+	tl.to($("#sidebar-wrapper"), 0.2, {
 		'margin-left' : "0px",
 		left : '0px',
 		width : '250px',
@@ -86,9 +86,9 @@ var open = function() {
 var close = function() {
 	$('#page-content-wrapper').css('opacity', '1');
 	$('#sidebar-wrapper h1').fadeOut(400);
-	$('.sidebar-nav').toggle(400, function() {
+	$('.sidebar-nav').toggle(200, function() {
 		var tl = new TimelineMax();
-		tl.to($("#sidebar-wrapper"), 1, {
+		tl.to($("#sidebar-wrapper"), 0.2, {
 			'margin-left' : "-250px",
 			left : '250px',
 			width : '0px'
