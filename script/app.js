@@ -23,7 +23,7 @@ app.controller('ContactController', function($scope, $http) {
 
 			method : 'POST',
 
-			url : '/ProfessionalWebsite/script/mail2.php',
+			url : 'mail2.php',
 
 			data : $.param($scope.formData), //param method from jQuery
 
