@@ -51,6 +51,16 @@ app.controller('ContactController', function($scope, $http) {
 				Materialize.toast('Message not sent!', 3000, 'rounded')
 			}
 
+		}).error(function(data) {
+
+				$scope.submitButtonDisabled = false;
+
+				$scope.resultMessage = data.message;
+
+				$scope.message = 'bg-danger';
+
+				Materialize.toast('Message not sent!', 3000, 'rounded')
+
 		});
 
 	};
