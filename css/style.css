@@ -1,66 +1,19 @@
-#bar-menu {
-	background-color: #000000;
-	color: #FFFFFF;
-	display: inline;
-	z-index: 100;
-	position : fixed;
-}
-#menu {
-	cursor: pointer;
-}
-.listsub {
-	display: none;
-	color: #FFFFFF;
-}
 .subjects {
 	cursor: pointer;
-}
-#sidebar-wrapper {
-	position: fixed;
-	margin-top:43px;
-	width: 0;
-	height: 100%;
-	overflow-y: auto;
-	margin-left: -250px;
-	background: #000;
-	z-index:100;
-}
-#sidebar-wrapper h1{
-	display:none;
-}
-.sidebar-nav {
-	list-style-type: none;
-	display: none;
-}
-.sidebar-nav li {
-	padding-top: 3em;
-	position: relative;
-	z-index: 91;
-}
-.sidebar-nav a {
-	color: #FFFFFF;
-	font-size: medium;
-	font-family: "Lato";
-	height: 0px;
-}
-.sidebar-nav li {
-	padding-top: 10%;
-	cursor: pointer;
-}
-#sidebar-wrapper h1 {
-	color: #EEEEEE;
-	font-size: 150%;
-	text-align: center;
-	font-family: "Lato";
 }
 #InputMessage {
 	resize: none;
 }
+#about-me::after, #projects::after, #skills::after {
+	position: relative;
+	top: 1.3rem;
+	height: 1px;
+	background: black;
+	width: 100%;
+	content: " ";
+}
 #about-me {
 	color: black;
-	position: relative;
-	z-index: 90;
-	padding-top:20px;
 }
 #back {
 	position: absolute;
@@ -70,21 +23,21 @@
 	left: 0;
 	top: 0;
 }
-#me {
-	border-radius: 75%;
-	max-width: 100%;
-	padding-top: 30px;
-}
-#me-descr {
+.text-center {
 	text-align: center;
 }
+.project > img {
+	width: 50%;
+}
 #about-me p {
-	font-size: 150%;
 	text-align: justify;
 }
-.social-buttons i {
-	color: black;
-	font-size: 200%
+.social-buttons img {
+	width: 34px;
+}
+.social-buttons li {
+	display: inline;
+	padding-right: 10px;
 }
 .fa-twitter:hover {
 	color: #4099FF;
@@ -101,42 +54,11 @@
 .fa-github:hover {
 	color: #4183c4;
 }
-#progetti h1, h4 {
-	text-align: center;
-}
-#progetti h3 {
-	text-align: center;
-	text-decoration: underline;
-}
 #descrizione {
 	text-align: justify;
-	font-size: 150%;
 }
-#progetti {
-	background-color: #3a75bc;
-}
-#link {
-	font-size: 150%;
-	color: black;
-	display: block;
-	text-align: center;
-}
-#contact {
-	background-color: black;
-	color:white;
-}
-#contact h1 {
-	text-align: center;
-}
-
-#experiences h1, h3 {
-	text-align: center;
-}
-#experiences, #experiences2 {
-	background-color: #DD4B39;
-}
-#experiences p, ul {
-	font-size: 110%;
+.link {
+	color: white;
 }
 #progetti img {
 	width: 60%;
@@ -144,28 +66,127 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-body {
-	font-family: "Lato";
+.full-width {
+	width: 100%;
+}
+.nav-wrapper {
+	background-color: #daad86;
+}
+.ribbon {
+ font-size: 16px !important;
+ width: 50%;
+ position: relative;
+ background: #daad86;
+ color: white;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon strong {
+	font-weight: 300;
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #daad86;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #92755B transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+.meter {
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.meter > span {
+  display: block;
+  height: 20px;
+	position: relative;
+	top: 0px;
+	left: -11px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #26a69a;
+  box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+.meter > span.quarter {
+	width: 25%;
+}
+.meter > span.half {
+	width: 50%;
+}
+.meter > span.more_half {
+	width: 75%;
+}
+.meter > span.full {
+	width: 100%;
+}
+.meter > span.quarter::after {
+	content: '25%';
+  float: right;
+  font-size: small;
 	color: white;
 }
-#footer{
-	background-color:#AAAAAA;
+.meter > span.half::after {
+	content: '50%';
+  float: right;
+  font-size: small;
+	color: white;
 }
-#footer h3{
-	color:black;
+.meter > span.more_half::after {
+	content: '75%';
+  float: right;
+  font-size: small;
+	color: white;
 }
-#footer ul{
-	text-align:center;
+.meter > span.full::after {
+	content: '100%';
+  float: right;
+  font-size: small;
+	color: white;
 }
-::-webkit-scrollbar {
-	width: 12px;
+.section-title {
+	font-weight: 300;
 }
-
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px black;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #AAAAAA;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+.page-footer {
+	padding-top: 0px;
+	margin-top: 2rem;
+	background-color: #daad86 !important;
 }

@@ -14,7 +14,7 @@ app.controller('ContactController', function($scope, $http) {
 	//used so that form errors are shown only after the form has been submitted
 
 	$scope.submit = function() {
-	
+
 		$scope.submitted = true;
 
 		$scope.submitButtonDisabled = true;
@@ -39,14 +39,16 @@ app.controller('ContactController', function($scope, $http) {
 
 				$scope.message = 'bg-success';
 
+				Materialize.toast('Message sent!', 3000, 'rounded')
 			} else {
-				
+
 				$scope.submitButtonDisabled = false;
 
 				$scope.resultMessage = data.message;
 
 				$scope.message = 'bg-danger';
 
+				Materialize.toast('Message not sent!', 3000, 'rounded')
 			}
 
 		});
