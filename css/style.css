@@ -1,192 +1,256 @@
 .subjects {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 #InputMessage {
-	resize: none;
+    resize: none;
 }
-#about-me::after, #projects::after, #skills::after {
-	position: relative;
-	top: 1.3rem;
-	height: 1px;
-	background: black;
-	width: 100%;
-	content: " ";
+
+#about-me::after,
+#projects::after,
+#skills::after {
+    position: relative;
+    top: 1.3rem;
+    height: 1px;
+    background: black;
+    width: 100%;
+    content: " ";
 }
+
 #about-me {
-	color: black;
+    color: black;
 }
+
 #back {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	opacity: 0.2;
-	left: 0;
-	top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    left: 0;
+    top: 0;
 }
+
 .text-center {
-	text-align: center;
+    text-align: center;
 }
-.project > img {
-	width: 50%;
+
+.project>img {
+    width: 50%;
 }
+
 #about-me p {
-	text-align: justify;
+    text-align: justify;
 }
+
 .social-buttons img {
-	width: 34px;
+    width: 34px;
 }
+
 .social-buttons li {
-	display: inline;
-	padding-right: 10px;
+    display: inline;
+    padding-right: 10px;
 }
+
 .fa-twitter:hover {
-	color: #4099FF;
+    color: #4099FF;
 }
+
 .fa-facebook:hover {
-	color: #3B5998;
+    color: #3B5998;
 }
+
 .fa-google-plus:hover {
-	color: #dd4b39;
+    color: #dd4b39;
 }
+
 .fa-linkedin:hover {
-	color: #0e76a8;
+    color: #0e76a8;
 }
+
 .fa-github:hover {
-	color: #4183c4;
+    color: #4183c4;
 }
+
 #descrizione {
-	text-align: justify;
+    text-align: justify;
 }
+
 .link {
-	color: white;
+    color: white;
 }
+
 #progetti img {
-	width: 60%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .full-width {
-	width: 100%;
+    width: 100%;
 }
+
 .nav-wrapper {
-	background-color: #daad86;
+    background-color: #daad86;
 }
+
 .ribbon {
- font-size: 16px !important;
- width: 50%;
- position: relative;
- background: #daad86;
- color: white;
- text-align: center;
- padding: 1em 2em; /* Adjust to suit */
- margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+    font-size: 16px !important;
+    width: 50%;
+    position: relative;
+    background: #daad86;
+    color: white;
+    text-align: center;
+    padding: 1em 2em;
+    /* Adjust to suit */
+    margin: 2em auto 3em;
+    /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
+
 .ribbon strong {
-	font-weight: 300;
+    font-weight: 300;
 }
-.ribbon:before, .ribbon:after {
- content: "";
- position: absolute;
- display: block;
- bottom: -1em;
- border: 1.5em solid #daad86;
- z-index: -1;
-}
-.ribbon:before {
- left: -2em;
- border-right-width: 1.5em;
- border-left-color: transparent;
-}
+
+.ribbon:before,
 .ribbon:after {
- right: -2em;
- border-left-width: 1.5em;
- border-right-color: transparent;
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #daad86;
+    z-index: -1;
 }
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
- content: "";
- position: absolute;
- display: block;
- border-style: solid;
- border-color: #92755B transparent transparent transparent;
- bottom: -1em;
+
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
 }
-.ribbon .ribbon-content:before {
- left: 0;
- border-width: 1em 0 0 1em;
+
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
 }
+
+.ribbon .ribbon-content:before,
 .ribbon .ribbon-content:after {
- right: 0;
- border-width: 1em 1em 0 0;
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #92755B transparent transparent transparent;
+    bottom: -1em;
 }
+
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
 .meter {
-	height: 20px;  /* Can be anything */
-	position: relative;
-	background: #555;
-	-moz-border-radius: 25px;
-	-webkit-border-radius: 25px;
-	border-radius: 25px;
-	padding: 10px;
-	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    height: 20px;
+    /* Can be anything */
+    position: relative;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
-.meter > span {
-  display: block;
-  height: 20px;
-	position: relative;
-	top: 0px;
-	left: -11px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: #26a69a;
-  box-shadow:
-    inset 0 2px 9px  rgba(255,255,255,0.3),
-    inset 0 -2px 6px rgba(0,0,0,0.4);
-  position: relative;
-  overflow: hidden;
+
+.meter>span {
+    display: block;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: -11px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #26a69a;
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
 }
-.meter > span.quarter {
-	width: 25%;
+
+.meter>span.quarter {
+    width: 25%;
 }
-.meter > span.half {
-	width: 50%;
+
+.meter>span.half {
+    width: 50%;
 }
-.meter > span.more_half {
-	width: 75%;
+
+.meter>span.more_half {
+    width: 75%;
 }
-.meter > span.full {
-	width: 100%;
+
+.meter>span.full {
+    width: 100%;
 }
-.meter > span.quarter::after {
-	content: '25%';
-  float: right;
-  font-size: small;
+
+.meter>span.quarter::after {
+    content: '25%';
+    float: right;
+    font-size: small;
 	color: white;
+	padding-right: 8px;
 }
-.meter > span.half::after {
-	content: '50%';
-  float: right;
-  font-size: small;
+
+.meter>span.half::after {
+    content: '50%';
+    float: right;
+    font-size: small;
 	color: white;
+	padding-right: 8px;
 }
-.meter > span.more_half::after {
-	content: '75%';
-  float: right;
-  font-size: small;
+
+.meter>span.more_half::after {
+    content: '75%';
+    float: right;
+    font-size: small;
 	color: white;
+	padding-right: 8px;
 }
-.meter > span.full::after {
-	content: '100%';
-  float: right;
-  font-size: small;
+
+.meter>span.full::after {
+    content: '100%';
+    float: right;
+    font-size: small;
 	color: white;
+	padding-right: 8px;
 }
+
 .section-title {
-	font-weight: 300;
+    font-weight: 300;
 }
+
 .page-footer {
-	padding-top: 0px;
-	margin-top: 2rem;
-	background-color: #daad86 !important;
+    padding-top: 0px;
+    margin-top: 2rem;
+    background-color: #daad86 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+nav a.brand-logo {
+    padding-left: 15px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    nav a.brand-logo.left {
+		right: 18px;
+		left: unset;
+    }
 }
